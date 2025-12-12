@@ -1,0 +1,87 @@
+/* Footer Section */
+/* Add horizontal padding for content */
+.footer {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  padding: 3rem 2.5vw 2rem 2.5vw;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  /* Fade-in animation */
+  opacity: 0;
+  animation: fadeInFooter 1s 0.5s forwards;
+}
+
+.footer-content p {
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.footer-content p:first-child {
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-socials a:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(22, 199, 132, 0.3);
+}
+
+.footer-socials img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.15) rotate(-6deg);
+  box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+}
+
+@keyframes fadeInFooter {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 2.5vw 1.5rem 2.5vw;
+  }
+  .footer-content {
+    gap: 1rem;
+  }
+  .footer-socials {
+    gap: 1rem;
+  }
+}

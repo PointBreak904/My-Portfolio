@@ -1,0 +1,96 @@
+/* About Section */
+/* Add top padding for fixed header and horizontal padding for content */
+.about {
+  padding: 10rem 2.5vw 5rem 2.5vw;
+  background: #fff;
+  margin-bottom: 2rem;
+}
+
+.about h2 {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image-container {
+  flex: 1;
+  min-height: 300px;
+  background: linear-gradient(135deg, var(--accent-light) 0%, #f0f0f0 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Fade-in animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 0.3s forwards;
+  transition: box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+
+.about-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-container:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-light);
+}
+
+.about-text ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 5rem 2.5vw 4rem 2.5vw;
+  }
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-image-container {
+    min-height: 250px;
+  }
+}

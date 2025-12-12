@@ -1,0 +1,98 @@
+/* Hero Section */
+/* Add top padding for fixed header and horizontal padding for content */
+.hero {
+  padding: 15rem 2.5vw 6rem 2.5vw;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  margin-bottom: 2rem;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+.hero-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+.hero-text h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  animation: slideInLeft 0.8s ease;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  animation: slideInLeft 0.8s 0.1s ease backwards;
+}
+.hero-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.8s 0.2s ease backwards;
+}
+.hero-cta:hover {
+  background: var(--secondary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  background: linear-gradient(135deg, var(--accent-light) 0%, #fff 100%);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  /* Fade-in animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 0.3s forwards;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.hero-image-container:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 2.5vw 4rem 2.5vw;
+  }
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hero-text {
+    padding-right: 0;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-image-container {
+    min-height: 250px;
+  }
+}
